@@ -19,4 +19,3 @@
     echo '<b>Autocomplete</b> : ';
     echo $output;
   }
-?>

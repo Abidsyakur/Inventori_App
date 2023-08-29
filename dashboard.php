@@ -2,15 +2,16 @@
 include 'config/koneksi.php';
 session_start();
 
-if(isset($_SESSION['username'])){
+if (isset($_SESSION['username'])) {
   $username =  $_SESSION['username'];
-  $query = mysqli_query($conn,"SELECT * FROM admin WHERE username = '$username'");
+  $query = mysqli_query($conn, "SELECT * FROM admin WHERE username = '$username'");
   $result = mysqli_fetch_array($query);
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,50 +22,53 @@ if(isset($_SESSION['username'])){
 </head>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
-*{
+
+  * {
     font-family: 'Jost', sans-serif;
-}
-  body{
+  }
+
+  body {
     background-color: #14C38E;
   }
+
   .container {
-  background-color: #85E6C5;
-  padding: 20px;
-  border-radius: 20px;
-}
+    background-color: #85E6C5;
+    padding: 20px;
+    border-radius: 20px;
+  }
 
-.row {
-  margin-top: 20px;
-}
+  .row {
+    margin-top: 20px;
+  }
 
-.navbar {
-  padding: 10px;
-}
+  .navbar {
+    padding: 10px;
+  }
 
-.right-column {
-  padding: 20px;
-}
+  .right-column {
+    padding: 20px;
+  }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
-h3 {
-  font-size: 65px;
-  margin-left: 2rem;
-  margin-top:5rem;
-  margin-bottom: 10px;
-}
+  h3 {
+    font-size: 65px;
+    margin-left: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 10px;
+  }
 
-p {
-  font-size: 16px;
-}
-
+  p {
+    font-size: 16px;
+  }
 </style>
+
 <body>
 
-<!-- dashboard -->
+  <!-- dashboard -->
   <div class="container mt-5 custom-shadow">
     <div class="d-flex justify-content-between">
       <nav class="navbar navbar-light bg-transparent">
@@ -86,9 +90,10 @@ p {
         <img src="asset/content.png" class="img-fluid" alt="Image">
       </div>
       <div class="col-md-6">
-        <h3>Selamat Datang <?=$result['nama']?> di Aplikasi Inventoris</h3>
+        <h3>Selamat Datang <?= $result['nama'] ?> di Aplikasi Inventoris</h3>
       </div>
     </div>
   </div>
 </body>
+
 </html>
