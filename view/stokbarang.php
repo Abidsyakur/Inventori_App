@@ -42,6 +42,7 @@ $hasil = mysqli_query($conn, $query);
     </svg>
   </a>
 
+  <!-- menu search -->
   <div class="container mt-5">
     <div class="row mb-3">
       <div class="col-md-6">
@@ -50,6 +51,7 @@ $hasil = mysqli_query($conn, $query);
       </div>
     </div>
     
+    <!-- card barang -->
     <div class="row" id="tampil">
       <?php foreach($hasil as $row) : ?>
       <div class="col-md-4">

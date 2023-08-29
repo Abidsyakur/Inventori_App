@@ -74,6 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </style>
 </head>
 <body>
+
+<!-- form login -->
   <div class="login-container">
     <h2>Login</h2>
     <?php if (isset($error_message)) { ?>

@@ -46,6 +46,10 @@
   </style>
 </head>
 <body>
+
+
+
+<!-- form sign -->
   <div class="signup-container">
     <h2>Sign Up</h2>
     <form action="controller/register.php" method="post">
